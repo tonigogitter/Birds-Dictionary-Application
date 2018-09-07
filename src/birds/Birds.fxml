@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.media.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane fx:id="borderP1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="730.0" prefWidth="971.0" style="-fx-background-image: url(&quot;file:src/Birds/WesternBackground.png&quot;);" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="birds.BirdsController">
+   <top>
+      <MenuBar fx:id="mainMenu" BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+                  <MenuItem mnemonicParsing="false" onAction="#loadDictionary" text="Fill Dictionary" />
+              <MenuItem mnemonicParsing="false" onAction="#exit" text="Close" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <left>
+      <Pane fx:id="Pane1" prefHeight="705.0" prefWidth="970.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="firstBtn" layoutX="230.0" layoutY="90.0" mnemonicParsing="false" onAction="#firstBird" prefHeight="27.0" prefWidth="116.0" text="First" />
+            <ComboBox fx:id="birdSize" layoutX="635.0" layoutY="623.0" prefWidth="150.0" />
+            <Button fx:id="nextBtn" layoutX="389.0" layoutY="90.0" mnemonicParsing="false" onAction="#nextBird" prefHeight="27.0" prefWidth="116.0" text="Next" />
+            <Button fx:id="prevBtn" layoutX="548.0" layoutY="90.0" mnemonicParsing="false" onAction="#previousBird" prefHeight="27.0" prefWidth="116.0" text="Previous" />
+            <Button fx:id="lastBtn" layoutX="710.0" layoutY="90.0" mnemonicParsing="false" onAction="#lastBird" prefHeight="27.0" prefWidth="116.0" text="Last" />
+            <Label fx:id="BirdnameLabel" layoutX="63.0" layoutY="169.0" prefHeight="31.0" prefWidth="241.0" text="Label" textFill="#4400ff" wrapText="true">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+            <Label fx:id="BirdDescripLabel" layoutX="63.0" layoutY="222.0" prefHeight="76.0" prefWidth="722.0" text="Label" textFill="#0d00ff" wrapText="true" />
+            <Button fx:id="deleteBtn" layoutX="819.0" layoutY="260.0" mnemonicParsing="false" onAction="#delete" text="Delete" textFill="WHITE" />
+            <ImageView fx:id="birdImage" fitHeight="263.0" fitWidth="316.0" layoutX="63.0" layoutY="321.0" pickOnBounds="true" preserveRatio="true" />
+            <Separator fx:id="topHdivider" layoutX="63.0" layoutY="320.0" prefHeight="0.0" prefWidth="834.0" />
+            <Separator fx:id="leftHdiv" layoutX="56.0" layoutY="320.0" orientation="VERTICAL" prefHeight="267.0" prefWidth="0.0" />
+            <Separator fx:id="botHdivider" layoutX="63.0" layoutY="583.0" prefHeight="0.0" prefWidth="836.0" />
+            <Separator fx:id="rightHdiv" layoutX="894.0" layoutY="323.0" orientation="VERTICAL" prefHeight="260.0" prefWidth="0.0" />
+            <Button fx:id="playBtn" layoutX="505.0" layoutY="417.0" mnemonicParsing="false" onAction="#play" prefHeight="73.0" prefWidth="87.0" text="Play" textFill="WHITE" />
+            <Button fx:id="stopBtn" layoutX="725.0" layoutY="416.0" mnemonicParsing="false" onAction="#stop" prefHeight="73.0" prefWidth="87.0" text="Stop" textFill="WHITE" />
+            <Button fx:id="findBtn" layoutX="833.0" layoutY="623.0" mnemonicParsing="false" onAction="#searchBird" text="Find" />
+            <Label layoutX="569.0" layoutY="627.0" text="Bird Size" />
+            <Label layoutX="130.0" layoutY="619.0" text="Bird Name" />
+            <TextField fx:id="BirdnameField" layoutX="197.0" layoutY="615.0" />
+         </children>
+      </Pane>
+   </left>
+</BorderPane>
